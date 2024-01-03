@@ -1,0 +1,157 @@
+/* style.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+a {
+    text-decoration: none; /* 去除下划线 */
+}
+ 
+/*样式化导航栏*/
+.navbar {
+   display: flex; /* 使用弹性盒模型 */
+   align-items: center; /* 垂直居中对齐 */
+    /* 其他样式... */
+}
+
+.navbar a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    /* 确保链接的垂直边距与标题匹配 */
+}
+
+.navbar a:hover {
+    background-color: #003d82;
+}
+
+.navbar a.active {
+    color: white; /* 字体颜色 */
+    font-weight: bold; /* 使文字更加突出 */
+    background-color: #003d82;
+}
+
+.navbar-title {
+	font-size: 36px; /* 标题的字体大小 */
+    font-weight: bold; /* 加粗字体 */
+    margin-right: 20px; /* 右侧的空间 */
+    font-family:华文行楷;
+}
+
+/* 样式化搜索框 */
+.search-box {
+  margin-left: 80px;
+  margin-right:180px;
+}
+
+.search-box input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 400px;
+}
+
+.search-box button {
+  background-color: #003d82;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* 样式化图标 */
+
+.personal-link {
+  align-items: center; /* 垂直居中对齐 */
+}
+
+.personal-link img {
+  /* 图标宽度 */
+  width: 30px;
+  /* 图标高度 */
+  height: 30px;
+}
+
+.carousel {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    display: none;
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    line-height: 300px;
+    font-size: 2em;
+}
+
+.carousel-slide.active {
+    display: block;
+}
+.carousel-slide img {
+    width: 100%;
+    height: 300px; /* 或者 'auto'，取决于您希望如何处理图片的高度 */
+    object-fit: cover; /* 这会确保图片覆盖整个区域，但可能会被裁剪 */
+}
+.carousel-slide:nth-child(1) {
+    background-color: #007bff;
+}
+
+.carousel-slide:nth-child(2) {
+    background-color: #6c757d;
+}
+
+.carousel-slide:nth-child(3) {
+    background-color: #28a745;
+}
+
+.news-section {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.news-article {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+.news-article a {
+    text-decoration: none; /* 移除下划线 */
+    color: inherit; /* 使用父元素的颜色 */
+}
+.news-article a:hover {
+    /* 可以添加一些悬停效果，如改变颜色 */
+    color: #0056b3;
+}
+.news-article h3 {
+    color: #0056b3;
+}
+
+.sidebar {
+    padding: 20px;
+    margin: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}

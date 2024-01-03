@@ -1,0 +1,226 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333; /* 深灰色文本 */
+}
+
+a {
+    text-decoration: none; /* 去除下划线 */
+	font-family:华文行楷;
+	font-size:30px;
+}
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #34495e; /* 深蓝灰色 */
+    color: white;
+    height: 100vh;
+    padding: 10px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover, .sidebar ul li a:focus {
+    background-color: #4e6a85; /* 浅蓝灰色 */
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f4f7f6;
+}
+
+.main-content section {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+/* 导航栏样式 */
+.main-navigation ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    background-color: #333;
+    margin-bottom: 20px;
+}
+
+.main-navigation ul li {
+    margin-right: 10px;
+}
+
+.main-navigation ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    display: block;
+}
+
+.main-navigation ul li a:hover {
+    background-color: #555;
+}
+
+/* 内容区域样式 */
+.content-section {
+    background-color: #f4f4f4;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #3498db; /* 亮蓝色 */
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+button {
+    background-color: #3498db; /* 亮蓝色 */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2874a6; /* 暗蓝色 */
+}
+
+input[type=text], input[type=date], textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #3498db; /* 亮蓝色 */
+    color: white;
+    padding: 10px 15px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #2874a6; /* 暗蓝色 */
+}
+
+/*弹窗*/
+/* 模态窗口基本样式 */
+.modal {
+    display: none; /* 隐藏模态窗口 */
+    position: fixed; /* 固定定位 */
+    z-index: 1; /* 置于顶层 */
+    left: 0;
+    top: 0;
+    width: 100%; /* 宽度100% */
+    height: 100%; /* 高度100% */
+    overflow: auto; /* 启用滚动 */
+    background-color: rgb(0,0,0); /* 背景色 */
+    background-color: rgba(0,0,0,0.4); /* 背景色（有透明度） */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 居中定位 */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* 宽度 */
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/*数据可视化*/
+canvas {
+    height: 250px;
+	background-color: #add8e6;
+}
+
+.dashboard-header {
+    padding: 20px;
+    background: #1e1e00;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard-header h1 {
+    margin: 0;
+}
+
+.dashboard-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.chart-container {
+    background: #252525;
+    padding: 15px;
+    border-radius: 5px;
+}

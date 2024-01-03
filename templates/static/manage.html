@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新闻管理系统</title>
+    <link rel="stylesheet" href="guanliyuan.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="#" onclick="showSection('news')">新闻管理</a></li>
+                <li><a href="#" onclick="showSection('ads')">广告管理</a></li>
+                <li><a href="#" onclick="showSection('users')">用户管理</a></li>
+            </ul>
+        </aside>
+        <main class="main-content" id="main-content">
+            <!-- 默认显示新闻管理的内容 -->
+            <div id="news" style="display: none;">
+				<nav class="main-navigation">
+				    <ul>
+				        <li><a href="#" onclick="showMainContent('news-management')">新闻管理</a></li>
+				        <li><a href="#" onclick="showMainContent('data-visualization')">数据可视化</a></li>
+				    </ul>
+				</nav>
+				<div id="news-management">
+					<table id="news-table">
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>标题</th>
+								<th>作者</th>
+								<th>日期</th>
+								<th>内容</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody>
+                        <!-- 新闻数据将通过 JavaScript 动态填充 -->
+						<!-- 示例数据行 
+							<tr>
+								<td>1</td>
+								<td>示例新闻标题</td>
+								<td>示例作者</td>
+								<td>2021-01-01</td>
+								<td>这里是新闻内容...</td>
+								<td>
+									<button onclick="editNews(${news.id})">编辑</button>
+									<button onclick="deleteNews(${news.id})">删除</button>
+								</td>
+							</tr>	这段代码只能用来查看表格格式，不能用于增删改-->
+						</tbody>
+					</table>
+				
+				<div id="add-news-form">
+				    <h3>添加新闻</h3>
+				    <form id="new-news-form">
+						<input type="data" id="new-id" placeholder="ID">
+				        <input type="text" id="new-title" placeholder="标题">
+				        <input type="text" id="new-author" placeholder="作者">
+				        <input type="date" id="new-date">
+				        <textarea id="new-content" placeholder="内容"></textarea>
+				        <button type="button" onclick="addNews()">添加</button>
+				    </form>
+				</div>
+				 </div>
+				 <!-- 数据可视化 -->
+				    <div id="data-visualization">
+				            <div class="dashboard-container">
+				                <div class="dashboard-content" id="app">
+				                    <section class="chart-container" id="news-type-section">
+				                        <canvas id="news-type-chart"></canvas>
+				                        <!-- 新闻类型数量图表 -->
+				                    </section>
+				                    <section class="chart-container" id="news-click-section">
+				                        <!-- 新闻点击量分布图表 -->
+				                    </section>
+				                </div>
+				            </div>
+				    </div>
+			</div>
+
+
+            <div id="ads" style="display: none;">
+                <nav class="main-navigation">
+                    <ul>
+                        <li><a href="#" onclick="showMainContent('news-management')">广告管理</a></li>
+                        <li><a href="#" onclick="showMainContent('data-visualization')">数据可视化</a></li>
+                    </ul>
+                </nav>
+                <div id="ads-management">
+                	<table id="ads-table">
+                		<thead>
+                			<tr>
+                				<th>ID</th>
+                				<th>标题</th>
+                				<th>作者</th>
+                				<th>日期</th>
+                				<th>内容</th>
+                				<th>操作</th>
+                			</tr>
+                		</thead>
+                		<tbody>
+                        <!-- 新闻数据将通过 JavaScript 动态填充 -->
+                		<!-- 示例数据行 
+                			<tr>
+                				<td>1</td>
+                				<td>示例新闻标题</td>
+                				<td>示例作者</td>
+                				<td>2021-01-01</td>
+                				<td>这里是新闻内容...</td>
+                				<td>
+                					<button onclick="editNews(${news.id})">编辑</button>
+                					<button onclick="deleteNews(${news.id})">删除</button>
+                				</td>
+                			</tr>	这段代码只能用来查看表格格式，不能用于增删改-->
+                		</tbody>
+                	</table>
+					
+					<!-- 添加广告 -->
+					<div id="add-ads-form">
+						<h3>添加广告</h3>
+						<form id="new-ads-form">
+							<input type="data" id="ad-id" placeholder="ID">
+							<input type="text" id="ad-title" placeholder="标题">
+							<input type="text" id="ad-author" placeholder="作者">
+							<input type="date" id="ad-date">
+							<textarea id="ad-content" placeholder="内容"></textarea>
+							<button type="button" onclick="addNews()">添加</button>
+						</form>
+					</div>
+				</div>
+                <!-- 数据可视化 -->
+                    
+			</div>
+			
+			<!-- 用户管理 -->
+            <div id="users" style="display: none;">
+                <nav class="main-navigation">
+                    <ul>
+                        <li><a href="#" onclick="showMainContent('news-management')">新闻管理</a></li>
+                        <li><a href="#" onclick="showMainContent('data-visualization')">数据可视化</a></li>
+                    </ul>
+                </nav>
+                <div id="news-management">
+                	<table id="news-table">
+                		<thead>
+                			<tr>
+                				<th>ID</th>
+                				<th>标题</th>
+                				<th>作者</th>
+                				<th>日期</th>
+                				<th>内容</th>
+                				<th>操作</th>
+                			</tr>
+                		</thead>
+                		<tbody>
+                        <!-- 新闻数据将通过 JavaScript 动态填充 -->
+                		<!-- 示例数据行 
+                			<tr>
+                				<td>1</td>
+                				<td>示例新闻标题</td>
+                				<td>示例作者</td>
+                				<td>2021-01-01</td>
+                				<td>这里是新闻内容...</td>
+                				<td>
+                					<button onclick="editNews(${news.id})">编辑</button>
+                					<button onclick="deleteNews(${news.id})">删除</button>
+                				</td>
+                			</tr>	这段代码只能用来查看表格格式，不能用于增删改-->
+                		</tbody>
+                	</table>
+                
+                <div id="add-news-form">
+                    <h3>添加新闻</h3>
+                    <form id="new-news-form">
+                		<input type="data" id="new-id" placeholder="ID">
+                        <input type="text" id="new-title" placeholder="标题">
+                        <input type="text" id="new-author" placeholder="作者">
+                        <input type="date" id="new-date">
+                        <textarea id="new-content" placeholder="内容"></textarea>
+                        <button type="button" onclick="addNews()">添加</button>
+                    </form>
+                </div>
+                 </div>
+                 <!-- 数据可视化 -->
+                    <div id="data-visualization" style="display: none;">
+                        <div class="dashboard-container">
+                                 
+                                <div class="dashboard-content">
+                                    <section class="chart-container" id="news-type-section">
+                						<canvas id="news-type-chart"></canvas>
+                                        <!-- 新闻类型数量图表 -->
+                                    </section>
+                                     
+                 					<section class="chart-container" id="news-click-section">
+                 					    <!-- 新闻点击量分布图表 -->
+                 					</section>
+                                </div>
+                            </div>
+                    </div>
+            </div>
+        </main>
+		
+		<!-- 编辑新闻的窗口 -->
+		<div id="edit-news-modal" class="modal">
+		    <div class="modal-content">
+		        <span class="close-button" onclick="closeModal()">&times;</span>
+		        <h2>编辑新闻</h2>
+				<input type="data" id="edit-id" placeholder="ID">
+		        <input type="text" id="edit-title" placeholder="标题">
+		        <input type="text" id="edit-author" placeholder="作者">
+		        <input type="date" id="edit-date">
+		        <textarea id="edit-content" placeholder="内容"></textarea>
+		        <button onclick="saveNews()">保存</button>
+		    </div>
+		</div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 十三新闻网</p>
+    </footer>
+	<!-- 先加载 Chart.js 库 -->
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<!-- 然后加载依赖 Chart.js 的脚本文件 -->
+	<script src="guanliyuan.js" defer></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+</body>
+</html>

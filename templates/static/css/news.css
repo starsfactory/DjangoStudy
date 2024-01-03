@@ -1,0 +1,38 @@
+/* style.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+    color: #333;
+	text-align: center;
+}
+
+p {
+    line-height: 1.6;
+}
+.image-container {
+    text-align: center;
+}
+.resize-image {
+    width: 35%; 
+    height: auto;
+}
+.caption {
+	font-size: 0.8em; /* 小字体大小 */
+    color: #666; /* 灰色字体 */
+}
+.right-align-text {
+    text-align: right; /* 设置文本为右对齐 */
+}
