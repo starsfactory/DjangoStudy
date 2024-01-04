@@ -33,12 +33,13 @@ def user_login(request):
         userPassword = request.POST.get('password')
 
         user = User.objects.filter(name=userName).first()
-
+        print('set session')
+        request.session['userid'] = user.id
         if user is not None:
             print("have find user")
             print(user.name)
             print(user.password)
-            return JsonResponse({'success': True, 'username': userName, 'userpassword': userPassword})
+            return JsonResponse({'success': True, 'username': user.name, 'userpassword': user.password})
         else:
             print('None')
             return JsonResponse({'success': False})

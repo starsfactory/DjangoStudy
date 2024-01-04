@@ -1,13 +1,14 @@
 from math import sqrt,pow
 import operator
-class UserCf():
 
-    #获得初始化数据,计算每个用户的评分的平均值
+
+class UserCf:
+    # 获得初始化数据,计算每个用户的评分的平均值
     def __init__(self, data):
         self.data = data
         self.ave = {}
         self.max = 0
-        for key,value in self.data.items():
+        for key, value in self.data.items():
             sum1 = 0.0
             for item, score in value.items():
                 if int(item) > self.max:
