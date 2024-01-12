@@ -1,0 +1,239 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /*background-color: #f4f4f4;*/
+    background-image: url(https://img-qn.51miz.com/preview/video/00/00/12/92/V-129224-185AEE62O.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+a {
+    text-decoration: none; /* 去除下划线 */
+}
+
+/*样式化导航栏*/
+.navbar {
+    display: flex; /* 使用弹性盒模型 */
+    align-items: center; /* 垂直居中对齐 */
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.navbar a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    position: relative;
+    /* 确保链接的垂直边距与标题匹配 */
+}
+
+.navbar a:hover {
+    background-color: #003d82;
+}
+
+.navbar a.active {
+    color: white; /* 字体颜色 */
+    font-weight: bold; /* 使文字更加突出 */
+    background-color: #003d82;
+}
+
+.navbar-title {
+    font-size: 36px; /* 标题的字体大小 */
+    font-weight: bold; /* 加粗字体 */
+    margin-right: 20px; /* 右侧的空间 */
+    font-family:华文行楷;
+}
+
+.classification {
+    display: inline-flex;
+    flex-wrap: nowrap;
+}
+
+/* 样式化搜索框 */
+.search-box {
+    display: inline-flex;
+    /*margin-left: 80px;*/
+    /*margin-right:180px;*/
+}
+
+.search-box input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    flex: 1 1 150px;
+}
+
+.search-box button {
+    background-color: #003d82;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* 样式化个人主页图标 */
+.personal-link {
+    align-items: center; /* 垂直居中对齐 */
+}
+
+.personal-link img {
+    /* 图标宽度 */
+    width: 30px;
+    /* 图标高度 */
+    height: 30px;
+    padding: 10px 20px;
+}
+
+.profile-container {
+    /*max-width: 1380px;*/
+    margin: 80px 0 0;
+    padding: 20px;
+    /*background-color: #fff;*/
+    background-color: rgba(255, 255, 255, 0.5); /* 50% 透明度的白色背景 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.profile-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 20px;
+    justify-content: space-between;
+}
+.profile-avatar {
+    flex: 0 0 120px; //flex-grow、flex-shrink、flex-basis
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.profile-avatar img {
+    width: 100%;
+}
+.profile-info {
+    flex: 1;
+    padding-left: 20px;
+}
+.profile-name {
+    font-size: 24px;
+    color: #333;
+}
+.profile-bio {
+    font-size: 16px;
+    color: #666;
+}
+.profile-stats {
+    padding-right: 30px;
+    display: flex;
+    align-items: center;
+}
+#collections-button {
+    padding: 0 20px;
+    text-align: center;
+    cursor: pointer;
+}
+.profile-stat-number {
+    font-size: 18px;
+    color: #333;
+}
+.profile-content {
+    display: flex;
+}
+.sidebar {
+    flex: 0 0 200px; /* 侧边栏宽度 */
+    /*background-color: #f4f4f4; !* 侧边栏背景色 *!*/
+    background-color: rgba(255, 255, 255, 0.5); /* 50% 透明度的白色背景 */
+    padding: 20px; /* 侧边栏内边距 */
+    height: 100vh; /* 侧边栏高度，占满视口高度 */
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* 侧边栏阴影效果 */
+}
+.sidebar div {
+    align-items: center;
+    padding: 10px;
+}
+.sidebar a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    margin: 10px;
+    /*margin-bottom: 30px;*/
+}
+
+.sidebar div:hover {
+    background-color: grey;
+}
+
+.sidebar a:hover {
+    color: blue; /* 鼠标悬浮时的颜色 */
+}
+
+/*.content {*/
+/*    flex-grow: 1; !* 内容区域占据剩余空间 *!*/
+/*    padding: 20px; !* 内容区域内边距 *!*/
+/*}*/
+.content {
+    flex-grow: 1;
+    font-family: Arial, sans-serif; /* 设置字体 */
+    /*background-color: #f9f9f9; !* 背景色 *!*/
+    background-color: rgba(255, 255, 255, 0.5); /* 50% 透明度的白色背景 */
+    border-radius: 8px; /* 边框圆角 */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 盒子阴影 */
+    padding: 20px; /* 内边距 */
+    margin: 20px; /* 外边距 */
+    /*max-width: 400px; !* 最大宽度 *!*/
+}
+
+.content h3 {
+    color: #333; /* 标题颜色 */
+    margin-bottom: 15px; /* 标题下边距 */
+}
+
+.content p {
+    color: #666; /* 段落文字颜色 */
+    line-height: 1.6; /* 行高 */
+    margin-bottom: 10px; /* 段落下边距 */
+}
+
+/* 您可以根据需要添加更多样式 */
+
+
+.news-section {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.news-article {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+.news-article a {
+    text-decoration: none; /* 移除下划线 */
+    color: inherit; /* 使用父元素的颜色 */
+}
+.news-article a:hover {
+    /* 可以添加一些悬停效果，如改变颜色 */
+    color: #0056b3;
+}
+.news-article h3 {
+    color: #0056b3;
+}

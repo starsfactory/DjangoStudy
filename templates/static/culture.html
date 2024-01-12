@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>十三新闻网-文化</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+    		<div>
+    			<span class="navbar-title">十三新闻网</span>
+    		</div>
+			<div class="classification">
+				<a href="home.html?type=home">主页</a>
+				<a href="internation.html?type=internation">国际</a>
+				<a href="technology.html?type=technology">科技</a>
+				<a href="sport.html?type=sport">体育</a>
+				<a href="amusement.html?type=amusement">文娱</a>
+				<a href="education.html?type=education">教育</a>
+				<a href="economics.html?type=economics">财经</a>
+				<a href="culture.html?type=culture" class="active">文化</a>
+			</div>
+    		<!-- 添加搜索框 -->
+    		<div class="search-box">
+    		  <input type="text" placeholder="搜索">
+    		  <button>搜索</button>
+    		</div>
+    		<!-- 添加个人图标 -->
+            <div>
+    			<a href="#" class="personal-link">
+    				<img src="imgs/girl.png" alt="个人主页" />
+    			</a>
+    		</div>
+        </nav>
+    </header>
+
+    <div class="carousel">
+        <div class="carousel-slide active">
+            <img src="imgs/wenhua1.jpg" alt="文化 1">
+        </div>
+        <div class="carousel-slide">
+            <img src="imgs/wenhua2.jpg" alt="文化 2">
+        </div>
+        <div class="carousel-slide">
+            <img src="imgs/wenhua3.jpg" alt="文化 3">
+        </div>
+        <!-- 添加更多幻灯片 -->
+    </div>
+
+    <main>
+		<section class="news-section">
+		    <h2>新时代中国调研行·长城篇｜万里长城：正织就文明交流互鉴的纽带</h2>
+		    <article class="news-article">
+		        <h3>新华社 2023-12-29 09:18 发表</h3>
+		        <p>跨越两千年，纵横四万里，长城见证了历史沧桑巨变，
+				也见证了中外文明交流。不久前，参加国际雪车联合会雪车和钢架雪车世界
+				杯延庆站比赛的外国运动员登上八达岭长城。运动员们沿蜿蜒曲折的城垣前行，
+				穿越烽火台，俯瞰岭上风光，感受长城雄伟气势。来自加拿大的钢架雪车运动员简·钱内尔表示，
+				爬上长城，感受中国这一古老的遗迹，真是一次特别的体验。...</p>
+		    </article>
+		    <!-- More articles -->
+		</section>
+		<section class="news-section">
+		    <h2>呈现江南画绣史</h2>
+		    <article class="news-article">
+		        <h3>人民日报海外版 2023-12-29 09:27 发表</h3>
+		        <p>近日，江苏苏州博物馆举办“出走露香园——江南画绣史”特展，展出多家文博机构及私人藏家收藏的100件（套）
+				刺绣精品，通过“以画入绣”“露香园绣”“宫墙内外”“以绣自立”“风月同天”5个板块，讲述江南画绣发展史及
+				其背后的女性故事，让观众深入感受刺绣艺术魅力。...</p>
+		    </article>
+		    <!-- More articles -->
+		</section>
+		<section class="news-section">
+		    <h2>“故宫·茶世界”特展福州展出 启动全球巡展</h2>
+		    <article class="news-article">
+		        <h3>中国新闻网 2023-12-29 09:29 发表</h3>
+		        <p>中新网福州12月28日电 “选择福建作为‘故宫·茶世界’茶文化特展全球巡展的首站，可谓水到渠成、
+				实至名归。”27日，故宫博物院副院长王跃工在福州如是说道。2023年12月28日至2024年3月31日，“故宫·茶世界”
+				茶文化特展在福建博物院正式对外展出，启动全球巡展。...</p>
+		    </article>
+		    <!-- More articles -->
+		</section>
+		
+		<!--从后端获取的新闻-->
+		<article id="news-list"></article>
+
+        <aside class="sidebar">
+            <h2>热门话题</h2>
+            <p>中国书法艺术的精粹</p>
+			<p>中国茶文化的深度了解</p>
+            <!-- 更多话题 -->
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 十三新闻网</p>
+    </footer>
+
+    
+</body>
+	<script src="js/jquery-3.7.1.js" type="text/javascript"></script>
+	<script src="js/script.js"></script>
+</html>

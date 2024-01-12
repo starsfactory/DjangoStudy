@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>十三新闻网-用户信息可视化</title>
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+
+<body>
+	<header>
+		<a class="return" href="g_users.html">返回主页</a>
+		<div class="showTime">当前时间：2024年1月<span></span></div>
+		<h1>用户数据可视化</h1>
+	</header>
+  <section class="mainbox">
+    <div class="column">
+      <div class="panel pie">
+        <h2>用户年龄分布</h2>
+        <div class="chart"></div>
+        <div class="panel-footer"></div>
+      </div>
+	  <div class="panel pie2">
+	    <h2>用户性别分布</h2>
+	    <div class="chart"></div>
+	    <div class="panel-footer"></div>
+	  </div>
+    </div>
+    <div class="column">
+      <div class="no">
+        <div class="no-hd">
+          <ul>
+            <li>125811</li>
+          </ul>
+        </div>
+        <div class="no-bd">
+          <ul>
+            <li>总注册人数</li>
+          </ul>
+        </div>
+      </div>
+      <div class="map">
+        <div class="chart"></div>
+        <div class="map1"></div>
+        <div class="map2"></div>
+        <div class="map3"></div>
+      </div>
+    </div>
+    <div class="column">
+		<div class="panel line">
+		  <h2>2023年注册人数变化</h2>
+		  <div class="chart"></div>
+		  <div class="panel-footer"></div>
+		</div>
+      <div class="panel pie1">
+        <h2>用户籍贯分布</h2>
+        <div class="chart"></div>
+        <div class="panel-footer"></div>
+      </div>
+    </div>
+  </section>
+  <script>
+    (function (fn) {
+      fn();
+      setInterval(fn, 1000);
+    })(function () {
+     var dt = new Date();
+      document.querySelector(".showTime span").innerHTML =
+        dt.getDate() + "日-" +
+        dt.getHours() + "时" +
+        dt.getMinutes() + "分" +
+        dt.getSeconds() + "秒";
+    });
+  </script>
+
+  <script src="js/flexible.js"></script>
+  <script src="https://www.jq22.com/jquery/echarts-4.2.1.min.js"></script>
+  <script src="js/users.js"></script>
+ 
+
+
+</body>
+
+</html>

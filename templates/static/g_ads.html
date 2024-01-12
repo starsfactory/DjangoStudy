@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>十三新闻网-广告管理</title>
+    <link rel="stylesheet" href="css/guanliyuan.css">
+	<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+        		<a href="g_ads.html"  class="active">广告管理</a>
+        		<a href="g_news.html">新闻管理</a>
+                <a href="g_users.html">用户管理</a>
+        	</nav>
+        </aside>
+        <main class="main-content" id="main-content">
+            <!-- 默认显示新闻管理的内容 -->
+				<nav class="main-navigation">
+				    <ul>
+				        <li><a href="#" onclick="showMainContent_news('news-management')">信息表单</a></li>
+				        <li><a href="ads-visualization.html">数据可视化</a></li>
+				    </ul>
+				</nav>
+				<div id="news-management">
+					<button class="new">新建数据</button>
+					<!--表格-->
+					<table class="recordForm">
+					    <!--    表格头部-->
+					    <thead>
+					    <tr>
+					        <th>编号</th>
+					        <th>广告编号</th>
+					        <th>广告标语</th>
+					        <th>广告链接</th>
+					        <th>联系电话</th>
+					        <th>广告类型</th>
+					        <th>业务员ID</th>
+					        <th>操作</th>
+					    </tr>
+					    </thead>
+					    <!--    表格主体-->
+					    <tbody id="table-body">
+							<tr>
+								<td>1</td>
+								<td>1</td>
+								<td>最新科技产品发布！点击了解详情。</td>
+								<td>https://consumer.huawei.com/cn/press/events/2023/huawei-all-scenario-new-product-autumn-launch-event/</td>
+								<td>17955583429</td>
+								<td>科技</td>
+								<td>3</td>
+								<td>
+									<button class="edit">编辑</button>
+									<button class="delete">删除</button>
+								</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>3</td>
+								<td>掌握财务管理，了解最新金融趋势。</td>
+								<td>https://zhuanlan.zhihu.com/p/596845571</td>
+								<td>15555583429</td>
+								<td>金融</td>
+								<td>3</td>
+								<td>
+									<button class="edit">编辑</button>
+									<button class="delete">删除</button>
+								</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>3</td>
+								<td>为公益事业献出一份力量。参与我们的活动。</td>
+								<td>http://www.chinacharityfederation.org/</td>
+								<td>15555773429</td>
+								<td>公益</td>
+								<td>4</td>
+								<td>
+									<button class="edit">编辑</button>
+									<button class="delete">删除</button>
+								</td>
+							</tr>
+						<tr>
+								<td>4</td>
+								<td>4</td>
+								<td>提升你的知识，加入我们的在线教育课程！</td>
+								<td>https://www.icourse163.org/</td>
+								<td>17977583429</td>
+								<td>教育</td>
+								<td>3</td>
+								<td>
+									<button class="edit">编辑</button>
+									<button class="delete">删除</button>
+								</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td>5</td>
+								<td>加入最刺激的游戏冒险，现在就开始！</td>
+								<td>https://xz.7xia.cc/?msclkid=3bee07e861d31dbd88a46248c274bea8</td>
+								<td>15565583429</td>
+								<td>游戏</td>
+								<td>3</td>
+								<td>
+									<button class="edit">编辑</button>
+									<button class="delete">删除</button>
+								</td>
+							</tr>
+							<tr>
+								<td>6</td>
+								<td>6</td>
+								<td>探索更多精彩内容！</td>
+								<td>https://www.thecfa.cn/index.html</td>
+								<td>15445773429</td>
+								<td>其他</td>
+								<td>4</td>
+								<td>
+									<button class="edit">编辑</button>
+									<button class="delete">删除</button>
+								</td>
+							</tr>
+
+					    </tbody>
+					</table>
+					<!--遮罩层-->
+					<section class="mask"></section>
+					<!--新建数据弹窗表单-->
+					<section class="newDialogForm">
+					    <header>
+					        <span>新建数据</span>
+					        <strong>X</strong>
+					    </header>
+					    <form action="" method="POST" autocomplete="off">
+					        <div>
+					            <label for="newContractNum">广告编号</label>
+					            <input type="text" id="newContractNum">
+					            <span class="verify"></span>
+					        </div>
+					        <div>
+					            <label for="newCompany">广告标语</label>
+					            <input type="text" id="newCompany">
+					            <span class="verify"></span>
+					        </div>
+					        <div>
+					            <label for="newName">广告链接</label>
+					            <input type="text" id="newName">
+					            <span class="verify"></span>
+					        </div>
+					        <div>
+					            <label for="newPhone">联系电话</label>
+					            <input type="text" id="newPhone">
+					            <span class="verify"></span>
+					        </div>
+					    	<div>
+					    	    <label for="newState">广告类型</label>
+					    	    <select id="newState">
+					    	        <option value="none" selected disabled hidden>请选择</option>
+					    	        <option value="科技">科技</option>
+					    	        <option value="教育">教育</option>
+					    	        <option value="金融">金融</option>
+					    	        <option value="电商">电商</option>
+					    	        <option value="游戏">游戏</option>
+					    	        <option value="公益">公益</option>
+					    	        <option value="其他">其他</option>
+					    	    </select>
+					    	    <span class="verify"></span>
+					    	</div>
+					        <div>
+					            <label for="newClerk">业务员</label>
+					            <input type="text" id="newClerk">
+					            <span class="verify"></span>
+					        </div>
+					    </form>
+					    <footer>
+					        <button class="newClose">关闭</button>
+					        <button class="newSave">保存</button>
+					    </footer>
+					</section>
+					<!--编辑数据弹窗表单-->
+					<section class="editDialogForm">
+					    <header>
+					        <span>编辑数据</span>
+					        <strong>X</strong>
+					    </header>
+					    <form action="" method="POST" autocomplete="off">
+					        <div>
+					            <label for="editContractNum">新闻编号</label>
+					            <input type="text" id="editContractNum">
+					        </div>
+					        <div>
+					            <label for="editCompany">新闻标题</label>
+					            <input type="text" id="editCompany">
+					        </div>
+					        <div>
+					            <label for="editName">发布者</label>
+					            <input type="text" id="editName">
+					        </div>
+					        <div>
+					            <label for="editPhone">联系电话</label>
+					            <input type="text" id="editPhone">
+					        </div>
+					        <div>
+					            <label for="editCompact">新闻类型</label>
+					            <select id="editCompact">
+					                <option value="none" selected disabled hidden>请选择</option>
+					                <option value="科技">科技</option>
+					                <option value="教育">教育</option>
+					                <option value="金融">金融</option>
+					                <option value="电商">电商</option>
+					                <option value="游戏">游戏</option>
+					                <option value="公益">公益</option>
+					                <option value="其他">其他</option>
+					            </select>
+					        </div>
+					        <div>
+					            <label for="editState">新闻状态</label>
+					            <select id="editState">
+					                <option value="none" selected disabled hidden>请选择</option>
+					                <option value="未生效">未发布</option>
+					                <option value="已生效">已发布</option>
+					            </select>
+					        </div>
+					        <div>
+					            <label for="editClerk">负责业务员</label>
+					            <input type="text" id="editClerk">
+					        </div>
+					    </form>
+					    <footer>
+					        <button class="editClose">关闭</button>
+					        <button class="editSave">保存</button>
+					    </footer>
+					</section>
+				</div>			
+		</main>
+	<script src="js/ads-table.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>十三新闻网-首页</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+			<div>
+				<span class="navbar-title">十三新闻网</span>
+			</div>
+			<div class="classification">
+				<a href="static/home.html?type=home" class="active">主页</a>
+				<a href="static/internation.html?type=internation">国际</a>
+				<a href="static/technology.html?type=technology">科技</a>
+				<a href="static/sport.html?type=sport">体育</a>
+				<a href="static/amusement.html?type=amusement">文娱</a>
+				<a href="static/education.html?type=education">教育</a>
+				<a href="static/economics.html?type=economics">财经</a>
+				<a href="static/culture.html?type=culture">文化</a>
+			</div>
+			<!-- 添加搜索框 -->
+			<div class="search-box">
+			  <input type="text" placeholder="搜索">
+			  <button>搜索</button>
+			</div>
+			<!-- 添加个人图标 -->
+            <div>
+				<a href="person.html" class="personal-link">
+					<img src="static/imgs/girl.png" alt="个人主页" />
+				</a>
+			</div>
+        </nav>
+    </header>
+
+    <div class="carousel">
+        <div class="carousel-slide active">
+            <img src="static/imgs/CCNUimg3.jpg" alt="Featured Story 1">
+        </div>
+        <div class="carousel-slide">
+            <img src="static/imgs/CCNUimg4.jpg" alt="Featured Story 2">
+        </div>
+        <div class="carousel-slide">
+            <img src="static/imgs/CCNUimg6.jpg" alt="Featured Story 3">
+        </div>
+        <!-- 添加更多幻灯片 -->
+    </div>
+	
+	<!-- 主页的内容 -->
+	<div id="mainContent">
+		<main>
+			<section class="news-section">
+			   <a href="news1.html" target="_blank">
+			   <h2>倒计时3天！华中师范大学考研须知，看这里！</h2>
+			    <article class="news-article">
+			        <h3>十三组成员1 2023-12-21 23:33 发表于湖北</h3>
+			        <p>2024年全国硕士研究生招生考试（初试）将于2023年12月23日至12月24日进行。今年研考
+					入场新增电子产品寄存和智能安检门检查环节，为确保考试平稳顺利，现将相关事项通知如下：</p>
+				</a>
+			    </article>
+			    <!-- More articles -->
+			</section>
+		    <section class="news-section">
+		        <h2>《 “幻” 得 “换” 失》——华中师范大学计算机学院首部防诈微电影正式发布</h2>
+		        <article class="news-article">
+		            <h3>十三组成员2 2023-12-20 20:48 发表于湖北</h3>
+		            <p>鱼因馋上钩，人因贪受骗。一个小小挣钱单，能让你无声无息成为诈骗帮凶。一个动心“一元购”，
+					能让你不知不觉落入诈骗圈套。防诈无小事，人人需谨慎下面让我们一起欣赏小猿制作的微电影《 “幻” 得 “换” 失》</p>
+		        </article>
+		        <!-- More articles -->
+		    </section>
+			
+			<!--从后端获取的新闻-->
+			<article id="news-list"></article>
+			
+		    <aside class="sidebar">
+		        <h2>热门话题</h2>
+		        <p>2024考研</p>
+		        <!-- More topics -->
+		    </aside>
+		</main>
+	</div>
+    
+    <footer>
+        <p>&copy; 2023 十三新闻网</p>
+    </footer>
+	  
+</body>
+	<script src="static/js/jquery-3.7.1.js" type="text/javascript"></script>
+	<script src="static/js/script.js"></script>
+</html>

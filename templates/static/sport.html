@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>十三新闻网-体育</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+    		<div>
+    			<span class="navbar-title">十三新闻网</span>
+    		</div>
+			<div class="classification">
+				<a href="home.html?type=home">主页</a>
+				<a href="internation.html?type=internation">国际</a>
+				<a href="technology.html?type=technology">科技</a>
+				<a href="sport.html?type=sport" class="active">体育</a>
+				<a href="amusement.html?type=amusement">文娱</a>
+				<a href="education.html?type=education">教育</a>
+				<a href="economics.html?type=economics">财经</a>
+				<a href="culture.html?type=culture">文化</a>
+			</div>
+    		<!-- 添加搜索框 -->
+    		<div class="search-box">
+    		  <input type="text" placeholder="搜索">
+    		  <button>搜索</button>
+    		</div>
+    		<!-- 添加个人图标 -->
+            <div>
+    			<a href="#" class="personal-link">
+    				<img src="imgs/girl.png" alt="个人主页" />
+    			</a>
+    		</div>
+        </nav>
+    </header>
+
+    <div class="carousel">
+        <div class="carousel-slide active">
+            <img src="imgs/tiyu1.jpg" alt="体育 1">
+        </div>
+        <div class="carousel-slide">
+            <img src="imgs/tiyu2.jpg" alt="体育 2">
+        </div>
+        <div class="carousel-slide">
+            <img src="imgs/tiyu3.jpg" alt="体育 3">
+        </div>
+        <!-- 添加更多幻灯片 -->
+    </div>
+
+    <main>
+		<section class="news-section">
+			<a href="news_sport.html">
+		    <h2>强项稳定状态 新项渴望突破：中国体育蓄势巴黎奥运</h2>
+		    <article class="news-article">
+		        <h3>中国新闻网 2023年12月29日 16:06 发表</h3>
+		        <p>中新网北京12月29日电 (记者 郝凌宇)2023年全国体育
+				局长会议28日在中国国家体育总局举行。会上透露，中国运动
+				员在2023年全年参加奥运项目世界大赛取得35枚金牌，位居美国
+				之后列第二位。截至目前，中国选手已获得142个项目巴黎奥运会参赛资格。...</p>
+		    </article>
+			</a>
+		    <!-- More articles -->
+		</section>
+		<section class="news-section">
+		    <h2>网球“联合杯”到底是个什么“杯”？张之臻挑战德约科维奇</h2>
+		    <article class="news-article">
+		        <h3>羊城晚报 2023年12月29日 14:28 发表</h3>
+		        <p>作为2024赛季开年赛事，联合杯将于2023年12月29日至2024年1月7日在澳大利亚展开角逐。...</p>
+		    </article>
+		    <!-- More articles -->
+		</section>
+		<section class="news-section">
+		    <h2>俄罗斯人斯卢茨基担任上海申花主帅</h2>
+		    <article class="news-article">
+		        <h3>扬子晚报 2023年12月28日 10:26 发表</h3>
+		        <p>扬子晚报讯(记者 张晨瑆 张昊)27日，上海申花足球俱乐部官方宣布，俱乐部与俄罗斯籍
+				教练莱昂尼德·斯卢茨基(Leonid Slutsky)完成签约，自2024年1月1日起，斯卢茨基正式出
+				任上海申花足球队主教练。...</p>
+		    </article>
+		    <!-- More articles -->
+		</section>
+
+		
+		<!--从后端获取的新闻-->
+		<article id="news-list"></article>
+		
+        <aside class="sidebar">
+            <h2>热门话题</h2>
+            <p>杭州亚运会</p>
+            <!-- 更多话题 -->
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 十三新闻网</p>
+    </footer>
+
+    
+</body>
+	<script src="js/jquery-3.7.1.js" type="text/javascript"></script>
+	<script src="js/script.js"></script>
+</html>

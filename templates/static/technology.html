@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>十三新闻网-科技</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+    		<div>
+    			<span class="navbar-title">十三新闻网</span>
+    		</div>
+			<div class="classification">
+				<a href="home.html?type=home">主页</a>
+				<a href="internation.html?type=internation">国际</a>
+				<a href="technology.html?type=technology"  class="active">科技</a>
+				<a href="sport.html?type=sport">体育</a>
+				<a href="amusement.html?type=amusement">文娱</a>
+				<a href="education.html?type=education">教育</a>
+				<a href="economics.html?type=economics">财经</a>
+				<a href="culture.html?type=culture">文化</a>
+			</div>
+    		<!-- 添加搜索框 -->
+    		<div class="search-box">
+    		  <input type="text" placeholder="搜索">
+    		  <button>搜索</button>
+    		</div>
+    		<!-- 添加个人图标 -->
+            <div>
+    			<a href="#" class="personal-link">
+    				<img src="imgs/girl.png" alt="个人主页" />
+    			</a>
+    		</div>
+        </nav>
+    </header>
+
+    <div class="carousel">
+        <div class="carousel-slide active">
+            <img src="imgs/ai.jpg" alt="科技新闻 1">
+        </div>
+        <div class="carousel-slide">
+            <img src="imgs/ai2.jpg" alt="科技新闻 2">
+        </div>
+        <div class="carousel-slide">
+            <img src="imgs/huoxing.jpg" alt="科技新闻 3">
+        </div>
+        <!-- 添加更多幻灯片 -->
+    </div>
+
+    <main>
+
+		<section class="news-section">			
+		    <a href="news_technology.html">
+				<h2>世界首台多通道测光巡天望远镜建成 实现蓝黄红三通道同时出光</h2>
+				<article class="news-article">
+					<h3>光明网-《光明日报》 2023-12-29 14:57 发表</h3>
+					<p>光明日报昆明12月28日电（记者徐鑫雨、张勇）由云南大学中国西南天文研究所提出设想并主持研制的
+				“多通道测光巡天望远镜（梦飞）”，于12月21日在云南丽江建成，并首次获得蓝黄红三通道同时出光的天体图像。
+				12月27日，望远镜研制团队在云南大学发布了该望远镜拍摄的首张真彩色天体图片。...</p>
+				</article>
+			</a>
+		    <!-- More articles -->
+		</section>
+		<section class="news-section">
+		    <h2>水母如何在几天内再生触手</h2>
+		    <article class="news-article">
+		        <h3>科技日报 2023-12-28 15:10:52 发表</h3>
+		        <p>科技日报北京12月27日电 （记者张梦然）太平洋枝手水母能在两到三天内再生断掉的触手，
+				但它们是如何再生的呢？日本东京大学研究团队现在发现，一种积极生长和分裂但尚未分化成特定细胞的干细胞样增殖细胞，
+				出现在了受伤部位并能帮助形成胚基。研究结果发表在《公共图书馆·生物学》上。...</p>
+		    </article>
+		    <!-- More articles -->
+		</section>
+		<section class="news-section">
+		    <h2>大国重器｜1亿倍速率加速！中国散裂中子源助力产出一批重大原创成果</h2>
+		    <article class="news-article">
+		        <h3>央视网 2023-12-28 13:51 发表</h3>
+		        <p>央视网消息：如果说，散裂中子源是探索物质微观世界的超级显微镜，那围绕着靶站的一条条谱仪就是一个个不同的镜头，
+				满足不同学科、不同方向的科研需求...</p>
+		    </article>
+		    <!-- More articles -->
+		</section>
+		<section class="news-section">
+		    <h2>2023年度十大科技名词揭晓</h2>
+		    <article class="news-article">
+		        <h3>光明日报 2023-12-27 06:52 发表</h3>
+		        <p>本报北京12月26日电（记者柴如瑾）“2023年度十大科技名词”26日在京发布。“大语言模型、生成式人工智能、量子计算、
+				脑机接口、数据要素、智慧城市、碳足迹、柔性制造、再生稻、可控核聚变”入选。这十个具有影响力和代表性的科技名词，为
+				公众描绘出一幅2023年科技发展的生动画卷。式...</p>
+		    </article>
+		    <!-- More articles -->
+		</section>
+	
+		<!--从后端获取的新闻-->
+		<article id="news-list"></article>
+	
+        <aside class="sidebar">
+            <h2>热门话题</h2>
+            <p>5G技术的未来</p>
+            <!-- 更多话题 -->
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 十三新闻网</p>
+    </footer>
+
+    
+</body>
+	<script src="js/jquery-3.7.1.js" type="text/javascript"></script>
+	<script src="js/script.js"></script>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>十三新闻网-国际</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+    		<div>
+    			<span class="navbar-title">十三新闻网</span>
+    		</div>
+			<div class="classification">
+				<a href="home.html?type=home">主页</a>
+				<a href="internation.html?type=internation" class="active">国际</a>
+				<a href="technology.html?type=technology">科技</a>
+				<a href="sport.html?type=sport">体育</a>
+				<a href="amusement.html?type=amusement">文娱</a>
+				<a href="education.html?type=education">教育</a>
+				<a href="economics.html?type=economics">财经</a>
+				<a href="culture.html?type=culture">文化</a>
+			</div>
+    		<!-- 添加搜索框 -->
+    		<div class="search-box">
+    		  <input type="text" placeholder="搜索">
+    		  <button>搜索</button>
+    		</div>
+    		<!-- 添加个人图标 -->
+            <div>
+    			<a href="#" class="personal-link">
+    				<img src="imgs/girl.png" alt="个人主页" />
+    			</a>
+    		</div>
+        </nav>
+    </header>
+
+    <div class="carousel">
+        <div class="carousel-slide active">
+            <img src="imgs/guoji1.jpg" alt="国际 1">
+        </div>
+        <div class="carousel-slide">
+            <img src="imgs/guoji2.jpg" alt="国际 2">
+        </div>
+        <div class="carousel-slide">
+            <img src="imgs/guoji3.jpg" alt="国际 3">
+        </div>
+        <!-- 添加更多幻灯片 -->
+    </div>
+
+    <main>
+		<section class="news-section">
+			<a href="news_internation.html">
+		    <h2>美学者分析：过去20年，美国外交为什么如此失败？</h2>
+		    <article class="news-article">
+		        <h3>参考消息网 2023-12-29 17:54 发表</h3>
+		        <p>参考消息网12月29日报道 澳大利亚“珍珠与刺激”网站
+				12月28日发表题为《美国外交政策是一个基于腐败的骗局》的文章，
+				作者是美国哥伦比亚大学可持续发展中心主任杰弗里·萨克斯。文章摘编如下</p>
+		    </article>
+			</a>
+		    <!-- More articles -->
+		</section>
+		<section class="news-section">
+		    <h2>综述：荷兰人捂紧“钱袋子”过节</h2>
+		    <article class="news-article">
+		        <h3>新华网 2023-12-29 17:08 发表</h3>
+		        <p>新华社海牙12月29日电 综述：荷兰人捂紧“钱袋子”过节。受经济不景气、通货膨胀和购买力下降等多重因素影
+				响，很多荷兰人不得不在今年圣诞新年购物季捂紧自己的“钱袋子”。据荷兰新闻网站NU.nl日前发布的一份调查报告，
+				荷兰圣诞节和新年相关商品价格较去年同期明显上涨，圣诞花环和罐装炖肉价格上涨约14%，红酒价格平均上涨约31%。</p>
+		    </article>
+		    <!-- More articles -->
+		</section>
+        
+		<!--从后端获取的新闻-->
+		<article id="news-list"></article>
+		
+        <aside class="sidebar">
+            <h2>热门话题</h2>
+            <p>俄乌冲突</p>
+            <!-- 更多话题 -->
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 十三新闻网</p>
+    </footer>
+
+    
+</body>
+	<script src="js/jquery-3.7.1.js" type="text/javascript"></script>
+	<script src="js/script.js"></script>
+</html>

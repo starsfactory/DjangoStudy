@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>十三新闻网-文娱</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+    		<div>
+    			<span class="navbar-title">十三新闻网</span>
+    		</div>
+			<div class="classification">
+				<a href="home.html?type=home">主页</a>
+				<a href="internation.html?type=internation">国际</a>
+				<a href="technology.html?type=technology">科技</a>
+				<a href="sport.html?type=sport">体育</a>
+				<a href="amusement.html?type=amusement" class="active">文娱</a>
+				<a href="education.html?type=education">教育</a>
+				<a href="economics.html?type=economics">财经</a>
+				<a href="culture.html?type=culture">文化</a>
+			</div>
+    		<!-- 添加搜索框 -->
+    		<div class="search-box">
+    		  <input type="text" placeholder="搜索">
+    		  <button>搜索</button>
+    		</div>
+    		<!-- 添加个人图标 -->
+            <div>
+    			<a href="#" class="personal-link">
+    				<img src="imgs/girl.png" alt="个人主页" />
+    			</a>
+    		</div>
+        </nav>
+    </header>
+
+    <div class="carousel">
+        <div class="carousel-slide active">
+            <img src="imgs/wenyu1.webp" alt="文娱 1">
+        </div>
+        <div class="carousel-slide">
+            <img src="imgs/wenyu2.webp" alt="文娱 2">
+        </div>
+        <div class="carousel-slide">
+            <img src="imgs/wenyu3.webp" alt="文娱 3">
+        </div>
+        <!-- 添加更多幻灯片 -->
+    </div>
+
+    <main>
+
+		<section class="news-section">
+		    <h2>国产电影为何老是在“套娃”</h2>
+		    <article class="news-article">
+		        <h3>解放日报 2023年12月28日 14:51 发表</h3>
+		        <p>单看这些电影，许多都有着不错的质量和立意，但“连连看”多了，观众难免会排斥电影的这种
+				老生常谈，希望在影院里看到更多元的电影。花季少女惨遭残忍杀害，嫌疑人是精神状态异常的富
+				二代男友，双方亲属正面硬碰硬，一个企图以暴制暴血刃仇人，一个滥用私权拼命包庇，一番撕扯下，...</p>
+		    </article>
+		    <!-- More articles -->
+		</section>
+		<section class="news-section">
+		    <h2>话剧《载酒东坡》在海南儋州首演</h2>
+		    <article class="news-article">
+		        <h3>光明日报 2023年12月28日 10:06 发表</h3>
+		        <p>光明日报儋州12月27日电（记者王晓樱、王轩尧）载酒堂挂牌揭匾，儋州男女老少相聚一堂，
+				这里承载着苏东坡载酒一生的故事。26日晚，话剧《载酒东坡》在海南省儋州市洋浦滨海文化广场首演。...</p>
+		    </article>
+		    <!-- More articles -->
+		</section>
+		<section class="news-section">
+		    <h2>沪上风云涌！电视剧《繁花》今晚央八开播</h2>
+		    <article class="news-article">
+		        <h3>中央广播电视总台CCTV电视剧 2023年12月27日 16:43 发表</h3>
+		        <p>由王家卫执导，胡歌、马伊琍、唐嫣、辛芷蕾领衔主演的电视剧《繁花》，今晚将在央视八套黄金强档重磅首播！
+				该剧改编自作家金宇澄同名小说，原著曾获“五个一工程”奖及茅盾文学奖，展现了一群沪上儿女的起伏人生。...</p>
+		    </article>
+		    <!-- More articles -->
+		</section>
+		
+		<!--从后端获取的新闻-->
+		<article id="news-list"></article>
+		
+        <aside class="sidebar">
+            <h2>热门话题</h2>
+            <p>流行音乐界的新星光</p>
+            <!-- 更多话题 -->
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 十三新闻网</p>
+    </footer>
+
+    
+</body>
+	<script src="js/jquery-3.7.1.js" type="text/javascript"></script>
+	<script src="js/script.js"></script>
+</html>

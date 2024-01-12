@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <title>个人主页</title>
+    <link rel="stylesheet" href="css/personal.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div>
+                <span class="navbar-title">十三新闻网</span>
+            </div>
+            <!-- 新闻分类 -->
+            <div class="classification">
+                <a href="home.html">主页</a>
+                <a href="internation.html">国际</a>
+                <a href="technology.html">科技</a>
+                <a href="sport.html">体育</a>
+                <a href="amusement.html">文娱</a>
+                <a href="education.html">教育</a>
+                <a href="economics.html">财经</a>
+                <a href="culture.html">文化</a>
+            </div>
+            <!-- 添加搜索框 -->
+            <div class="search-box">
+                <input type="text" placeholder="搜索">
+                <button>搜索</button>
+            </div>
+            <!-- 添加个人图标 -->
+            <div>
+                <a href="personal.html" class="personal-link">
+                    <img src="imgs/girl.png" alt="个人主页" />
+                </a>
+            </div>
+        </nav>
+    </header>
+    <div class="profile-container">
+        <div class="profile-header">
+            <div class="profile-avatar">
+                <!-- Avatar image here -->
+                <img src="imgs/logoxinwenguanli.png" alt="Profile Avatar" id="profile-avatar">
+            </div>
+            <div class="profile-info">
+                <div class="profile-name">昵称</div>
+                <div class="profile-bio">这个人很懒，什么也没留下~</div>
+            </div>
+            <div class="profile-stats">
+                <div class="collections-button" id="collections-button">
+                    <div class="profile-stat-number">21</div>
+                    <div class="profile-stat-text">收藏</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile-content">
+            <div class="sidebar">
+                <div>
+                    <a href="#" class="personal-page">个人主页</a>
+                </div>
+                <div>
+                    <a href="#" class="collections-button">我的收藏</a>
+                </div>
+                <div>
+                    <a href="#" class="personal-image">我的画像</a>
+                </div>
+            </div>
+            <div class="content">
+                <h3>账号信息</h3>
+                <p id="username">账号名：你真棒</p>
+                <p id="gender">性别：男</p>
+                <p id="age">年龄：29</p>
+                <p id="location">所在地区：湖北武汉</p>
+                <p id="email">邮箱：793673206@qq.com</p>
+                <p id="phone">手机号码：13367382211</p>
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+    <script src="js/jquery-3.7.1.js" type="text/javascript"></script>
+    <script src="js/personal.js"></script>
+</html>

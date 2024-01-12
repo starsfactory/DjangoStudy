@@ -22,6 +22,8 @@ a {
 .navbar {
    display: flex; /* 使用弹性盒模型 */
    align-items: center; /* 垂直居中对齐 */
+   justify-content: space-between;
+   flex-wrap: nowrap;
     /* 其他样式... */
 }
 
@@ -30,6 +32,7 @@ a {
     padding: 10px 20px;
     text-decoration: none;
     transition: background-color 0.3s;
+    position: relative;
     /* 确保链接的垂直边距与标题匹配 */
 }
 
@@ -50,17 +53,23 @@ a {
     font-family:华文行楷;
 }
 
+.classification {
+    display: inline-flex;
+    flex-wrap: nowrap;
+}
+
 /* 样式化搜索框 */
 .search-box {
-  margin-left: 80px;
-  margin-right:180px;
+  display: inline-flex;
+  /*margin-left: 80px;*/
+  /*margin-right:180px;*/
 }
 
 .search-box input {
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 3px;
-  width: 400px;
+  flex: 1 1 150px;
 }
 
 .search-box button {
@@ -83,6 +92,7 @@ a {
   width: 30px;
   /* 图标高度 */
   height: 30px;
+  padding: 10px 20px;
 }
 
 .carousel {

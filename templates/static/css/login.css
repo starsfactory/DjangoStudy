@@ -1,13 +1,18 @@
 /* style.css */
-body {
+body{
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background: linear-gradient(to right, #2c3e50, #4ca1af);
+	background-color: #06164A;
+    background-image: url(../imgs/denglu.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 850px 850px;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+	z-index: 10;
 }
 
 .login-container {

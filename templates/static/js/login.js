@@ -15,7 +15,11 @@ window.onload = function() {
                 if (username === data['username'] && password === data['userpassword']) {
                     // 登录成功，重定向到首页
                     console.log("hello");
-                    window.location.href = '/static/home.html';
+                    if (!data['isuser']) {
+                        window.location.href = 'static/home.html?type=home';
+                    } else{
+                        window.location.href = 'static/g_ads.html';
+                    }
                 } else {
                     // 登录失败，显示错误信息或重定向
                     console.log('fail');

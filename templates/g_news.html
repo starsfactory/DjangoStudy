@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>十三新闻网-新闻管理</title>
+    <link rel="stylesheet" href="static/css/guanliyuan.css">
+	<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+        		<a href="static/g_ads.html">广告管理</a>
+        		<a href="static/g_news.html"  class="active">新闻管理</a>
+                <a href="static/g_users.html">用户管理</a>
+        	</nav>
+        </aside>
+        <main class="main-content" id="main-content">
+            <!-- 默认显示新闻管理的内容 -->
+				<nav class="main-navigation">
+				    <ul>
+				        <li><a href="#" onclick="showMainContent_news('news-management')">信息表单</a></li>
+				        <li><a href="static/news-visualization.html" ">数据可视化</a></li>
+				    </ul>
+				</nav>
+				<div id="news-management">
+					<button class="new">新建数据</button>
+					<!--表格-->
+					<table class="recordForm">
+					    <!--    表格头部-->
+					    <thead>
+					    <tr>
+					        <th>编号</th>
+					        <th>新闻编号</th>
+					        <th>新闻标题</th>
+					        <th>发布者</th>
+					        <th>联系电话</th>
+					        <th>新闻类型</th>
+							<th>新闻简介</th>
+					        <th>负责业务员</th>
+					        <th>操作</th>
+					    </tr>
+					    </thead>
+					    <!--    表格主体-->
+					    <tbody>
+					    </tbody>
+					</table>
+					<!--遮罩层-->
+					<section class="mask"></section>
+					<!--新建数据弹窗表单-->
+					<section class="newDialogForm">
+					    <header>
+					        <span>新建数据</span>
+					        <strong>X</strong>
+					    </header>
+					    <form action="" method="POST" autocomplete="off">
+					        <div>
+					            <label for="newContractNum">新闻编号</label>
+					            <input type="text" id="newContractNum">
+					            <span class="verify"></span>
+					        </div>
+					        <div>
+					            <label for="newCompany">新闻标题</label>
+					            <input type="text" id="newCompany">
+					            <span class="verify"></span>
+					        </div>
+					        <div>
+					            <label for="newName">发布者</label>
+					            <input type="text" id="newName">
+					            <span class="verify"></span>
+					        </div>
+					        <div>
+					            <label for="newPhone">联系电话</label>
+					            <input type="text" id="newPhone">
+					            <span class="verify"></span>
+					        </div>
+							<div>
+							    <label for="newState">合同状态</label>
+							    <select id="newState">
+							        <option value="none" selected disabled hidden>请选择</option>
+							        <option value="国际">国际</option>
+							        <option value="科技">科技</option>
+							        <option value="财经">财经</option>
+							        <option value="文娱">文娱</option>
+							        <option value="教育">教育</option>
+							        <option value="文化">文化</option>
+							        <option value="体育">体育</option>
+							    </select>
+							    <span class="verify"></span>
+							</div>
+					        <div>
+					            <label for="newEquipment">新闻简介</label>
+					            <input type="text" id="newEquipment">
+					            <span class="verify"></span>
+					        </div>
+					        <div>
+					            <label for="newClerk">业务员</label>
+					            <input type="text" id="newClerk">
+					            <span class="verify"></span>
+					        </div>
+					    </form>
+					    <footer>
+					        <button class="newClose">关闭</button>
+					        <button class="newSave">保存</button>
+					    </footer>
+					</section>
+					<!--编辑数据弹窗表单-->
+					<section class="editDialogForm">
+					    <header>
+					        <span>编辑数据</span>
+					        <strong>X</strong>
+					    </header>
+					    <form action="" method="POST" autocomplete="off">
+					        <div>
+					            <label for="editContractNum">新闻编号</label>
+					            <input type="text" id="editContractNum">
+					        </div>
+					        <div>
+					            <label for="editCompany">新闻标题</label>
+					            <input type="text" id="editCompany">
+					        </div>
+					        <div>
+					            <label for="editName">发布者</label>
+					            <input type="text" id="editName">
+					        </div>
+					        <div>
+					            <label for="editPhone">联系电话</label>
+					            <input type="text" id="editPhone">
+					        </div>
+					        <div>
+					            <label for="editState">新闻类型</label>
+					            <select id="editState">
+					                <option value="none" selected disabled hidden>请选择</option>
+					                <option value="国际">国际</option>
+					                <option value="科技">科技</option>
+					                <option value="财经">财经</option>
+					                <option value="文娱">文娱</option>
+					                <option value="教育">教育</option>
+					                <option value="文化">文化</option>
+					                <option value="体育">体育</option>
+					            </select>
+					        </div>
+							<div>
+							    <label for="editEquipment">新闻简介</label>
+							    <input type="text" id="editEquipment">
+							</div>
+					        <div>
+					            <label for="editClerk">负责业务员</label>
+					            <input type="text" id="editClerk">
+					        </div>
+					    </form>
+					    <footer>
+					        <button class="editClose">关闭</button>
+					        <button class="editSave">保存</button>
+					    </footer>
+					</section>
+				</div>			
+		</main>
+
+	<!-- 先加载 Chart.js 库 -->
+	<script src="static/js/news-table.js" defer></script>
+</body>
+</html>

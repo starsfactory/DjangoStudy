@@ -1,0 +1,168 @@
+/* 页面最上侧导航栏样式 */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+a {
+    text-decoration: none; /* 去除下划线 */
+}
+
+/*样式化导航栏*/
+.navbar {
+    display: flex; /* 使用弹性盒模型 */
+    align-items: center; /* 垂直居中对齐 */
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.navbar a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    position: relative;
+    /* 确保链接的垂直边距与标题匹配 */
+}
+
+.navbar a:hover {
+    background-color: #003d82;
+}
+
+.navbar a.active {
+    color: white; /* 字体颜色 */
+    font-weight: bold; /* 使文字更加突出 */
+    background-color: #003d82;
+}
+
+.navbar-title {
+    font-size: 36px; /* 标题的字体大小 */
+    font-weight: bold; /* 加粗字体 */
+    margin-right: 20px; /* 右侧的空间 */
+    font-family:华文行楷;
+}
+
+.classification {
+    display: inline-flex;
+    flex-wrap: nowrap;
+}
+
+/* 样式化搜索框 */
+.search-box {
+    display: inline-flex;
+    /*margin-left: 80px;*/
+    /*margin-right:180px;*/
+}
+
+.search-box input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    flex: 1 1 150px;
+}
+
+.search-box button {
+    background-color: #003d82;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* 样式化个人主页图标 */
+.personal-link {
+    align-items: center; /* 垂直居中对齐 */
+}
+
+.personal-link img {
+    /* 图标宽度 */
+    width: 30px;
+    /* 图标高度 */
+    height: 30px;
+    padding: 10px 20px;
+}
+
+/* 导航栏下侧内容 包括左侧收藏什么的 中间内容 还有右侧广告*/
+.content {
+    display: flex;
+    margin-top: 80px; /* same height as navbar */
+}
+.sidebar {
+    position: fixed;
+    left: 0;
+    width: 60px;
+    background-color: #f4f4f4;
+    height: 100%;
+    padding-top: 20px; /* space for navbar */
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    z-index: 500;
+}
+.sidebar button {
+    display: block;
+    margin: 20px auto;
+    width: 40px;
+    height: 40px;
+    background-color: #ddd;
+    /*border: none;*/
+    border-radius: 15px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+}
+
+.sidebar .not-collected {
+    color:grey;
+}
+
+.sidebar .collected {
+    color: gold;
+}
+/* 新闻 */
+.news-content {
+    flex-grow: 1;
+    padding: 20px;
+    padding-left: 80px; /* width of sidebar + some padding */
+    max-width: 80%;
+    text-align: center;
+}
+#news-title {
+    font-size: 36px;
+    margin: 0;
+}
+
+/* 设置新闻作者和发布日期样式 */
+#news-author,
+#news-date {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/* 广告 */
+.advertisement {
+    flex-basis: 200px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    margin-left: 20px;
+}
+
+.advertisement img {
+    max-width: 100%; /* 图片最大宽度为其容器的宽度 */
+    height: auto; /* 高度自动调整以保持宽高比 */
+}
